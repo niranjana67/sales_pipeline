@@ -1,0 +1,20 @@
+resources:
+  pipelines:
+    pipeline_sales_pipeline:
+      name: Sales-Pipeline
+      libraries:
+        - glob:
+            include: ../../src/sales_pipeline_ETL/**
+      schema: prod_sales
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: nbn_catalog
+      notifications:
+        - email_recipients:
+            - lndpoojan@gmail.com
+          alerts:
+            - on-update-success
+      serverless: true
+      root_path: ../../src/sales_pipeline_ETL
