@@ -10,7 +10,7 @@ resources:
       development: false
       photon: true
       channel: CURRENT
-      catalog: nbn_catalog
+      catalog: Sales
       notifications:
         - email_recipients:
             - lndpoojan@gmail.com
